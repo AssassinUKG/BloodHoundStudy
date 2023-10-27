@@ -43,7 +43,9 @@ Knowing we have admin privileges on one machine (`s-00042@testlabs.local`), lets
 - Then we get the Domain Admin.
 
 ## Path 3
-Starting from another of the known users `HPETO00139@TESTLAB.LOCALE` we can see a simular attack path to path 1. 
+Starting from another of the known users `HPETO00139@TESTLAB.LOCALE` we can see a similar attack path to path 1. 
+
+![image](https://github.com/AssassinUKG/BloodHoundStudy/assets/5285547/9d28ad9b-35ae-46ba-8645-038fdd1f4438)
 
 ### Path 3 Route (User: HPETO00139@TESTLAB.LOCALE > DOMAIN ADMIN)
 - The user `HPETO00139@TESTLAB.LOCALE` is a member of the group `T1 Management@TESTLAB.LOCALE`
