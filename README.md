@@ -16,7 +16,7 @@ I then selected the Domain admins group as my end path and set the user DBL~ as 
 
 ![image](https://github.com/AssassinUKG/BloodHoundStudy/assets/5285547/4b5b1074-bbfe-4fc6-a41b-af4882e1ba73)
 
-### Path 2 Route
+### Path 2 Route (User:DBLUMBERG00200 > Domain Admin)
 - `DBLUMBERG00200` has `AllExtendedRights` privilege to the `MBOLSTER00157@TESTLAB.LOCALE` from the `T1 PAW Maintenance@TESTLAB.LOCALE` group.   
 - `MBOLSTER00157@TESTLAB.LOCALE` has `AddMember` permission to the `T2 Admin Accounts` groups. By adding itself to the group, `T1 Management@TESTLAB.LOCALE` will gain the same privileges that `T2 Admin Accounts Group@TESTLAB.LOCALE` already has.    
 - We then have two options, we have T2 Admin rights over `PAW-00041` computer or `T2 Admin Accounts Group@TESTLAB.LOCALE` have the `AllExtendedRights` privilege to the user `DABASCAL00279@TESTLAB.LOCALE`. The user `DABASCAL00279@TESTLAB.LOCALE` has membership in the `Distributed COM` Users local group on the computer `PAW-00041@TESTLAB.LOCALE`.    
