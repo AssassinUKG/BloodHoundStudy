@@ -19,7 +19,7 @@ I then selected the Domain admins group as my end path and set the user DBL~ as 
 ### Path 2 Route (User:DBLUMBERG00200 > Domain Admin)
 - `DBLUMBERG00200` has `AllExtendedRights` privilege to the `MBOLSTER00157@TESTLAB.LOCALE` from the `T1 PAW Maintenance@TESTLAB.LOCALE` group.   
 - `MBOLSTER00157@TESTLAB.LOCALE` has `AddMember` permission to the `T2 Admin Accounts` groups. By adding itself to the group, `T1 Management@TESTLAB.LOCALE` will gain the same privileges that `T2 Admin Accounts Group@TESTLAB.LOCALE` already has.    
-- We then have two options, we have T2 Admin rights over `PAW-00041` computer or `T2 Admin Accounts Group@TESTLAB.LOCALE` have the `AllExtendedRights` privilege to the user `DABASCAL00279@TESTLAB.LOCALE`. The user `DABASCAL00279@TESTLAB.LOCALE` has membership in the `Distributed COM` Users local group on the computer `PAW-00041@TESTLAB.LOCALE`.    
+- We then have two options, we have `T2 Admin rights` over `PAW-00041` computer or `T2 Admin Accounts Group@TESTLAB.LOCALE` have the `AllExtendedRights` privilege to the user `DABASCAL00279@TESTLAB.LOCALE`. The user `DABASCAL00279@TESTLAB.LOCALE` has membership in the `Distributed COM` Users local group on the computer `PAW-00041@TESTLAB.LOCALE`.    
 - The user `FKIRCHMANN00135@TESTLAB.LOCALE` has a session on the computer `PAW-00041@TESTLAB.LOCALE`. So we can use this session token inpernation and password theft.   
 - The user `FKIRCHMANN00135@TESTLAB.LOCALE` is a member of the group `ACCOUNT OPERATORS@TESTLAB.LOCALE`.    
 - The members of the group `ACCOUNT OPERATORS@TESTLAB.LOCALE` have `GenericAll` privileges to the group `SERVER OPERATORS@TESTLAB.LOCALE`  
