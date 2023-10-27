@@ -1,5 +1,8 @@
 # BloodHoundStudy
 
+Richard Jones
+27/10/2023
+
 ## Initial Study
 Knowing we wanted to get to an admin group, I added the domain admins@testlab.local to bloodhound to do a reverse search. 
 
