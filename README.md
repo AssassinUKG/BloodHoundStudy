@@ -28,3 +28,17 @@ I then selected the Domain admins group as my end path and set the user DBL~ as 
 - The members of the group `SERVER OPERATORS@TESTLAB.LOCALE` have permissions to modify the `DACL (Discretionary Access Control List)` on the group `DOMAIN ADMINS@TESTLAB.LOCALE`   
 - Then we can become the Domain Admin. (AD PWned)
 
+## Path 2
+Knowing we have admin privileges on one machine (`s-00042@testlabs.local`), lets start there. 
+
+![image](https://github.com/AssassinUKG/BloodHoundStudy/assets/5285547/97438d18-5697-4c5d-a4c3-d773ed353ac9)
+
+### Path 2 Route (PC: `S-00042@TESTLABS.LOCAL` > DOMAIN ADMIN)
+- The user `LMENTION00250@TESTLAB.LOCALE` has a session on the computer `S-00042@TESTLAB.LOCALE`
+- The user `LMENTION00250@TESTLAB.LOCALE` has the capability to create a `Remote Desktop Connection` with the computer `WS-00058@TESTLAB.LOCALE`
+- The user `KCOSSANO00133@TESTLAB.LOCALE` has a session on the computer `WS-00058@TESTLAB.LOCALE` (mimikatz.eze / lsass.exe)
+- The user `KCOSSANO00133@TESTLAB.LOCALE` is a member of the group `ACCOUNT OPERATORS@TESTLAB.LOCALE`
+- The members of the group `ACCOUNT OPERATORS@TESTLAB.LOCALE` have `GenericAll` privileges to the group `SERVER OPERATORS@TESTLAB.LOCALE`
+- The members of the group `SERVER OPERATORS@TESTLAB.LOCALE` have permissions to modify the `DACL (Discretionary Access Control List)` on the group `DOMAIN ADMINS@TESTLAB.LOCALE`
+- Then we get the Domain Admin.
+
