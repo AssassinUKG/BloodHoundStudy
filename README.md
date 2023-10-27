@@ -57,3 +57,11 @@ Starting from another of the known users `HPETO00139@TESTLAB.LOCALE` we can see 
 - The members of the group `SERVER OPERATORS@TESTLAB.LOCALE` have permissions to modify the `DACL (Discretionary Access Control List)` on the group `DOMAIN ADMINS@TESTLAB.LOCALE`
 - At this point we would have DOMAIN ADMIN access.
 
+## Custom Queries
+Source: https://github.com/CompassSecurity/BloodHoundQueries
+Install
+```
+curl -o ~/.config/bloodhound/customqueries.json "https://raw.githubusercontent.com/CompassSecurity/BloodHoundQueries/master/BloodHound_Custom_Queries/customqueries.json"
+```
+
+
