@@ -45,7 +45,7 @@ Knowing we have admin privileges on one machine (`s-00042@testlabs.local`), lets
 ## Path 3
 Starting from another of the known users `HPETO00139@TESTLAB.LOCALE` we can see a simular attack path to path 1. 
 
-### Path 2 Route (User: HPETO00139@TESTLAB.LOCALE > DOMAIN ADMIN)
+### Path 3 Route (User: HPETO00139@TESTLAB.LOCALE > DOMAIN ADMIN)
 - The user `HPETO00139@TESTLAB.LOCALE` is a member of the group `T1 Management@TESTLAB.LOCALE`
 - The members of the group `T1 Management@TESTLAB.LOCALE` have the ability to add arbitrary principals, including themselves, to the group `T2 Admin Accounts Group@TESTLAB.LOCALE`. Because of security group delegation, the members of a security group have the same privileges as that group
 - From the T2 Admin Accounts group we have two options.
