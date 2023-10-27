@@ -84,6 +84,6 @@ One of the shortest paths being from a user we already have access to `JIENNACO0
 
 I would use tools like mimikatz.exe or obfuscated versions to access various shells (PowerShell, cmd). I would try to remain stealthy by using custom-built tools that are slightly different from the publically available tools. 
 If acting in a black hat way. I would assume I would be trying to steal or encrypt large amounts of data to gain more asset hold over the target. 
-A black hat may consider the use of malware and zero day exploits rather than relying on known red teaming or penetration testing tools and methods. (more risky out of the box thinking)
+A black hat may consider the use of malware and zero day exploits rather than relying on known red teaming or penetration testing tools and methods. (more risky out-of-the-box thinking)
 
-
+If none of the paths were viable for the hacker, they may consider to fall back on older tactics, like spear phishing to try and gain another foothold)
