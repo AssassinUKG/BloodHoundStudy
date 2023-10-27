@@ -42,3 +42,18 @@ Knowing we have admin privileges on one machine (`s-00042@testlabs.local`), lets
 - The members of the group `SERVER OPERATORS@TESTLAB.LOCALE` have permissions to modify the `DACL (Discretionary Access Control List)` on the group `DOMAIN ADMINS@TESTLAB.LOCALE`
 - Then we get the Domain Admin.
 
+## Path 3
+Starting from another of the known users `HPETO00139@TESTLAB.LOCALE` we can see a simular attack path to path 1. 
+
+### Path 2 Route (User: HPETO00139@TESTLAB.LOCALE > DOMAIN ADMIN)
+- The user `HPETO00139@TESTLAB.LOCALE` is a member of the group `T1 Management@TESTLAB.LOCALE`
+- The members of the group `T1 Management@TESTLAB.LOCALE` have the ability to add arbitrary principals, including themselves, to the group `T2 Admin Accounts Group@TESTLAB.LOCALE`. Because of security group delegation, the members of a security group have the same privileges as that group
+- From the T2 Admin Accounts group we have two options.
+   1. The members of the group `T2 Admin Accounts Group@TESTLAB.LOCAL` have admin rights to the computer `T2 Admin Devices@TESTLAB.LOCALE`, which can access `PAW-00041` computer
+   2. The members of the group `T2 Admin Accounts Group@TESTLAB.LOCALE` have the `AllExtendedRights` privilege to the user `DABASCAL00279@TESTLAB.LOCALE`, The user `DABASCAL00279@TESTLAB.LOCALE` has membership in the `Distributed COM` Users local group on the computer `PAW-00041@TESTLAB.LOCALE`
+- The user `FKIRCHMANN00135@TESTLAB.LOCALE` has a session on the computer `PAW-00041@TESTLAB.LOCALE`
+- The user `FKIRCHMANN00135@TESTLAB.LOCALE` is a member of the group `ACCOUNT OPERATORS@TESTLAB.LOCALE`
+- The members of the group `ACCOUNT OPERATORS@TESTLAB.LOCALE` have `GenericAll` privileges to the group `SERVER OPERATORS@TESTLAB.LOCALE`
+- The members of the group `SERVER OPERATORS@TESTLAB.LOCALE` have permissions to modify the `DACL (Discretionary Access Control List)` on the group `DOMAIN ADMINS@TESTLAB.LOCALE`
+- At this point we would have DOMAIN ADMIN access.
+
