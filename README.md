@@ -57,11 +57,28 @@ Starting from another of the known users `HPETO00139@TESTLAB.LOCALE` we can see 
 - The members of the group `SERVER OPERATORS@TESTLAB.LOCALE` have permissions to modify the `DACL (Discretionary Access Control List)` on the group `DOMAIN ADMINS@TESTLAB.LOCALE`
 - At this point we would have DOMAIN ADMIN access.
 
+## There are many more paths in this Active Directory environment, I've only picked three for now
+
 ## Custom Queries
 Source: https://github.com/CompassSecurity/BloodHoundQueries
 Install
 ```
 curl -o ~/.config/bloodhound/customqueries.json "https://raw.githubusercontent.com/CompassSecurity/BloodHoundQueries/master/BloodHound_Custom_Queries/customqueries.json"
 ```
+
+Using custom queries we can gain a better understanding of the network, computers and users.   
+
+![image](https://github.com/AssassinUKG/BloodHoundStudy/assets/5285547/4be0f19d-5c57-4d08-9fb7-5d02dce51886)
+
+Using the shortest paths to the domain option we can see a clear image with paths to try.  
+![image](https://github.com/AssassinUKG/BloodHoundStudy/assets/5285547/b487fb1b-a298-4a05-9f1b-450fb9caf4c6)
+
+One of the shortest paths being from a user we already have access to `JIENNACO00149@TESTLAB.LOCALE`
+
+### JIENNACO00149@TESTLAB.LOCALE Attack Path Route
+- `JIENNACO00149@TESTLAB.LOCALE` can RDP to PC `WS-00058@TESTLAB.LOCALE` which has a session for user `KCOSSANO00133@TESTLAB.LOCALE`
+- `KCOSSANO00133@TESTLAB.LOCALE` is a member of `ACCOUNT OPERATORS@TESTLAB.LOCAL` which has `GenricAll` rights over the `SERVER OPERATORS@TESTLAB.LOCAL` group.
+-  The `SERVER OPERATORS@TESTLAB.LOCAL` group has `WriteDacl` over the `DOMAIN ADMIN` group. Ending up as `DOMAIN ADMIN`
+
 
 
